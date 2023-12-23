@@ -32,13 +32,28 @@ main {
   font-size: 18px;
 }
 
-/* pseudo-class for centering text in code */
 .text-center {
   text-align: center;
 }
 
-/* pseudo-class for wrapping <div> in code */
 .wrapper {
   width: 400px;
   margin: auto;
 }
+
+a:link {
+  color:white;
+}
+
+a:visited {
+  color: indigo;
+}
+
+a:hover {
+  color:seagreen;
+}
+
+a:active {
+  color:burgandy;
+}
+  
