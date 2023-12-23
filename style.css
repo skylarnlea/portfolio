@@ -5,6 +5,7 @@ header {
   font-size: 18px;
   color: black;
   font-family: cursive;
+  line-height:0.5;
 }
 
 /* styling for my photo */
@@ -30,6 +31,7 @@ main {
   color: white;
   font-family: comic sans;
   font-size: 18px;
+  line-height:1.5;
 }
 
 .text-center {
@@ -41,12 +43,13 @@ main {
   margin: auto;
 }
 
+/* pseudo-classes for links (LoVe HAte) */
 a:link {
   color:white;
 }
 
 a:visited {
-  color: indigo;
+  color: black;
 }
 
 a:hover {
@@ -54,6 +57,7 @@ a:hover {
 }
 
 a:active {
-  color:burgandy;
+  color:cadetblue;
 }
+
   
