@@ -44,20 +44,28 @@ main {
 }
 
 /* pseudo-classes for links (LoVe HAte) */
+/* styling color for link as is before clicking on it or hovering over it */
 a:link {
   color:white;
 }
-
+/* styling color for link once it has been clicked on/visited */
 a:visited {
   color: black;
 }
-
+/*styling color for link while hovering over it */
 a:hover {
   color:seagreen;
 }
-
+/* styling color for link while clicking on it*/
 a:active {
   color:cadetblue;
+}
+
+/* styling for <hr> (includes height) */
+hr {
+  height: 1px;
+  background-color: black;
+  border-color: black;
 }
 
   
