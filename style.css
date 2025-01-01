@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #FFFFFF; /* White background */
-  color: #3E3D3D; /* Dark gray for text */
+  background-color: #3E3D3D;
+  color: #FFFFFF;
   line-height: 1.6;
 }
 
@@ -10,14 +10,17 @@ header {
   background-color: #3E3D3D;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: #FFFFFF; /* White text */
+  position: relative;
 }
 
 header h1 {
   margin: 0;
   font-size: 1.8em;
+  text-align: center;
+  flex: 1; /* Take up available space to ensure centering */
 }
 
 nav {
@@ -34,6 +37,25 @@ nav a {
 
 nav a:hover {
   color: #EFEFEE; /* Slightly off-white on hover */
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute; /* Allows independent placement */
+  right: 20px; /* Align to the right */
+  top: 20px;
+}
+
+.hamburger div {
+  height: 3px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
 }
 
 .icons {
@@ -90,7 +112,7 @@ main {
 .about-section p {
   margin: 10px 0;
   font-size: 1.1em;
-  color: #3E3D3D; /* Dark gray text */
+  color: #EFEFEE;
 }
 
 .projects-section h2, .contact-section h2 {
@@ -106,7 +128,7 @@ main {
 }
 
 .projects-section ul li {
-  background: #EFEFEE; /* Light gray background for projects */
+  background: #A3826C; /* Light gray background for projects */
   margin: 10px 0;
   padding: 15px;
   border-radius: 5px;
@@ -121,7 +143,12 @@ main {
   height: 200px;
   object-fit: cover;
   border-radius: 5px;
-  border: 2px solid #A3826C; /* Tan border around images */
+  border: 2px solid #3E3D3D;
+}
+
+.projects-section div {
+  text-align: left;
+  max-width: 600px;
 }
 
 .contact-section form {
@@ -168,7 +195,7 @@ footer p {
   color: #3E3D3D; /* Dark gray text */
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   header {
       flex-direction: column;
       align-items: flex-start;
@@ -177,5 +204,114 @@ footer p {
   .about-section {
       flex-direction: column;
       text-align: center;
+  }
+}
+*/
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #3E3D3D;
+    padding: 15px;
+    border-radius: 5px;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Move the hamburger menu to the right */
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .about-section img {
+    max-width: 300px;
+  }
+
+  .projects-section ul li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .projects-section ul li img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-section form {
+    gap: 10px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  nav {
+    gap: 5px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+
+  .about-section img {
+    max-width: 250px;
+  }
+
+  .about-section h2 {
+    font-size: 1.5em;
+  }
+
+  .projects-section ul li {
+    padding: 10px;
+  }
+
+  .projects-section ul li img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-section form input,
+  .contact-section form textarea {
+    font-size: 0.9em;
+  }
+
+  .contact-section form button {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  footer p {
+    font-size: 0.8em;
   }
 }
