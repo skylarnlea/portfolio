@@ -8,7 +8,7 @@ body {
 
 header {
   background-color: #3E3D3D;
-  padding: 20px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@ nav {
 nav a {
   color: #FFFFFF; /* White links */
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.25em;
   transition: color 0.3s ease;
 }
 
@@ -149,6 +149,21 @@ main {
 .projects-section div {
   text-align: left;
   max-width: 600px;
+}
+
+.projects-section a {
+  color: #FFFFFF; /* Default color for links */
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.projects-section a:hover {
+  color: #EFEFEE; /* Slightly off-white on hover */
+}
+
+.projects-section a:visited {
+  color: #3E3D3D; /* Dark gray color after the link is clicked */
 }
 
 .contact-section form {
