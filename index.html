@@ -4,56 +4,89 @@
         <meta charset="utf-8"> <!-- defining character set for html page -->
         <meta name="viewport" content="width=device-width"> <!-- makes html web page compatible to all screens -->
         <title>Portfolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
 
    <!-- Portfolio Web Page Content Below -->
     <body>
-    <!-- Top portion of web page with name and job title -->
-      <header class="text-center"> <!--class for centering text-->
-        <h1>Skylar Lea</h1> <!-- main heading for entire page -->
-        <h3>Software Developer</h3> 
-      </header>
-    <!-- Main body of web page with the welcome message, about me, and contact me -->
-      <main class="text-center"><!--class for centering text-->
-        <div class="wrapper"><!--class wrapping <div> -->
-          <img src="images/profilephoto.jpg" alt="Profile Photo" height="400" width="300"/> <!--image source in folder-->
-            <article> <!-- header for article doesn't need <section> -->
-              <h2 style="color:black">Welcome to my page - I'm Skylar!</h2> <!--styling <h2> individually here-->
-              <p>I am a software developer in the Kansas City Metro Area</p>
-              <!--anchor link to contact me section-->
-              <p>To get ahold of me for future projects or collaborations, you can  <a href="#ContactMe">Contact Me</a>.</p>
-            <hr> 
-            <section>
-              <h3 style="color:black">About Me</h3><!--styling <h3> individually here-->
-              <p>I strive to help the world connect in the most efficient and proficient ways via the web. It's my goal to learn from the best to become the best at providing a solution to the world's tech issues. And that starts with mastering the skill of software development.</p>
-              <p>My enjoyments outside of software development include:</p>
-              <ul style="text-align: left"> <!-- creating unorganized, bulleted list for what I like to do outside of software dev.-->
-                <li>traveling</li>
-                <li>coffee</li>
-                <li>working out</li>
-                <li>puzzles</li>
-                <li>dogs</li>
-              </ul>
-            </section> <!-- ending first section -->
-            <hr> <!-- creating a break between sections -->
-            <section id="ContactMe"> <!--anchor link to contact me section-->
-              <h3 style="color:black">Contact Me</h3> <!-- <h3> because not as important as "Welcome" -->
-              <p>I'd love to chat with you! I'm available Monday-Saturday, feel free to contact me via:</p>
-              <ol style="text-align: left"><!--creating organized, numbered list for ways to contact me-->
-                <li><a href="https://www.linkedin.com/in/skylarnicolelea/">LinkedIn</a></li><!--absolute link to my LinkedIn profile-->
-                <li><a href="https://github.com/skylarnlea">GitHub</a></li><!--absolute link to my GitHub profile-->
-              </ol>
-            </section>
-            </article>
+      <header>
+        <h1>SKYLAR LEA - SOFTWARE ENGINEER</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="icons">
+            <a href="#" aria-label="GitHub">&#xf09b;</a>
+            <a href="#" aria-label="LinkedIn">&#xf08c;</a>
+            <a href="#" aria-label="Resume" class="bi bi-file-earmark-person"></a>
         </div>
+      </header>
+      <main>
+        <section class="about-section" id="about">
+            <img src="/images/profilephoto.jpg" alt="About Me Image">
+            <div class="text">
+                <h2>Hi, I'm Skylar!</h2>
+                <p>Welcome to my personal space! I'm passionate about simplifying others' lives and 
+                    have been working in the healthcare field for over 10 years and Software Engineering 
+                    for over one year.</p>
+                <p>In my spare time, I enjoy working out, an iced coffee, spending time with my 
+                    husband and daughter, and doing a difficult puzzle. I strive to make my clients' 
+                    visions become reality in the most efficient and simplified form.</p>
+            </div>
+        </section>
+        <section class="projects-section" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <img src="/images/RestaurantReservationDashboard.png" alt="Project 1">
+                    <div>
+                        <strong>Restaurant Reservations Application:</strong> This full-stack web 
+                        application creates a reservation system for restaurant personnel to utilize 
+                        when a customer calls to request a reservation. This includes creating new 
+                        reservations, editing existing reservations, searching for reservations, booking 
+                        and seating reservations, cancelling reservations, and "finishing" reservations 
+                        once those guests have completed their dining experience. 
+                        The application includes testing, error-handling, routes, and validation middleware. Migrations 
+                        and seeds were created using Knex, alongside controllers and services to connect 
+                        to and query the PostgreSQL database. Both the server and client sides were 
+                        deployed through Render - <a href="https://restaurant-reservation-app-project.onrender.com/dashboard">take a look</a>.
+                    </div>
+                </li>
+                <li>
+                    <img src="/images/FlashcardApp.png" alt="Project 2">
+                    <div>
+                        <strong>Flashcard Application:</strong> Teachers will use this application to create decks of flash cards for the subjects that 
+                        they teach, and students will study the decks. Users can create and delete decks, cards, and study decks of cards as well.
+                        This application involves React functionn components, creating routes, using hooks, and debugging React code - 
+                        <a href="https://flashcard-app-xo3y.onrender.com/">take a look</a>.
+                    </div>
+                </li>
+                <li>
+                    <img src="/images/ReactRecipeApp.png" alt="Project 3">
+                    <div>
+                        <strong>React Recipe Application:</strong> This project, is a recipe-tracking app that allows a user to add a new recipe, 
+                        display a list of current recipes, and delete a recipe from the list by clicking a Delete button.
+                        This application tested my ability to work with rendering and state management using React - <a href="https://updated-recipe-app.onrender.com/"> take a look</a>.
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="contact-section" id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
       </main>
-    <!--copyright footer-->
-      <footer class="text-center"> 
-        <p>© Skylar Lea</p>
+      <footer>
+        <p>&copy; 2024 Skylar Lea. All Rights Reserved.</p>
       </footer>
-    <script src="script.js"></script>
-</body>
+    </body>
 </html>
 
