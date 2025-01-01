@@ -21,6 +21,7 @@ header h1 {
   font-size: 1.8em;
   text-align: center;
   flex: 1; /* Take up available space to ensure centering */
+  position: relative; /* Relative positioning */
 }
 
 nav {
@@ -228,11 +229,15 @@ footer p {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
+    justify-content: center; /* Keep items horizontally centered */
   }
 
   header h1 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    position: relative;
+    left: 50%; /* Move to the horizontal center */
+    transform: translateX(-50%); /* Center the h1 horizontally */
+    margin-top: 20px; /* Add top margin to prevent overlap */
+    font-size: 1.5em; /* Slightly smaller font size on small screens */
   }
 
   nav {
