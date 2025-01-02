@@ -149,6 +149,9 @@ main {
 .projects-section {
   text-align: center; /* Center-align the heading and content */
   padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .projects-container {
@@ -157,6 +160,8 @@ main {
   justify-content: space-evenly; /* Evenly space items horizontally */
   gap: 20px; /* Add space between items */
   padding: 20px; /* Add padding around the container */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card {
@@ -171,6 +176,11 @@ main {
   display: flex; /* Flexbox layout for the card */
   flex-direction: column; /* Stack content vertically inside the card */
   justify-content: space-between; /* Space out the content */
+  transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Slight hover effect */
 }
 
 .project-card img {
@@ -199,7 +209,7 @@ main {
 
 .project-buttons a:hover {
   background-color: #FFFFFF; /* Change background color on hover */
-  color:#A3826C;
+  color: #A3826C;
 }
 
 .contact-section form {
@@ -303,7 +313,9 @@ footer p {
   }
 
   .project-card {
+    flex: 1 1 100%;
     width: 90%; /* Reduce card width for smaller screens */
+    max-width: 100%;
   }
 
   .contact-section form {
@@ -333,13 +345,21 @@ footer p {
     font-size: 1.5em;
   }
 
+  .projects-section {
+    padding: 15px;
+  }
+
   .projects-container {
     padding: 10px;
   }
 
-  .projects-card {
+  .project-card {
+    width: 100%; /* Ensure cards take full width on very small screens */
     max-width: 100%;
-    height: auto;
+  }
+
+  .project-buttons a {
+    padding: 8px 12px; /* Adjust button size for smaller screens */
   }
 
   .contact-section form input,
