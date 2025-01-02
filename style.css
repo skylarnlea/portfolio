@@ -146,48 +146,60 @@ main {
   color: #A3826C; /* Muted tan for section headers */
 }
 
-.projects-section ul {
-  list-style-type: none;
-  padding: 0;
+.projects-section {
+  text-align: center; /* Center-align the heading and content */
+  padding: 20px;
 }
 
-.projects-section ul li {
-  background: #A3826C; /* Light gray background for projects */
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.projects-container {
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap when needed */
+  justify-content: space-evenly; /* Evenly space items horizontally */
+  gap: 20px; /* Add space between items */
+  padding: 20px; /* Add padding around the container */
 }
 
-.projects-section ul li img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-  border: 2px solid #3E3D3D;
+.project-card {
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+  max-width: 300px; /* Limit the maximum width of each card */
+  background-color: #A3826C; /* Background color for the card */
+  color: #FFFFFF; /* Text color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  padding: 20px; /* Internal padding for the card */
+  text-align: center; /* Center-align text inside the card */
+  display: flex; /* Flexbox layout for the card */
+  flex-direction: column; /* Stack content vertically inside the card */
+  justify-content: space-between; /* Space out the content */
 }
 
-.projects-section div {
-  text-align: left;
-  max-width: 600px;
+.project-card img {
+  width: 100%; /* Image takes full width of card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded image corners */
+  margin-bottom: 15px; /* Space below the image */
 }
 
-.projects-section a {
-  color: #FFFFFF; /* Default color for links */
-  text-decoration: none;
-  font-size: 1em;
-  transition: color 0.3s ease;
+.project-buttons {
+  display: flex; /* Use Flexbox for the buttons */
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Space between the buttons */
 }
 
-.projects-section a:hover {
-  color: #EFEFEE; /* Slightly off-white on hover */
+.project-buttons a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none; /* Remove underline */
+  background-color: #3E3D3D;  /* Button background color */
+  color: #FFFFFF; /* Text color */
+  border-radius: 5px; /* Rounded corners for buttons */
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Add hover effect */
 }
 
-.projects-section a:visited {
-  color: #3E3D3D; /* Dark gray color after the link is clicked */
+.project-buttons a:hover {
+  background-color: #FFFFFF; /* Change background color on hover */
+  color:#A3826C;
 }
 
 .contact-section form {
@@ -234,18 +246,6 @@ footer p {
   color: #3E3D3D; /* Dark gray text */
 }
 
-/* @media (max-width: 768px) {
-  header {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .about-section {
-      flex-direction: column;
-      text-align: center;
-  }
-}
-*/
 
 @media (max-width: 768px) {
   header {
@@ -297,15 +297,13 @@ footer p {
     max-width: 300px;
   }
 
-  .projects-section ul li {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .projects-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center cards */
   }
 
-  .projects-section ul li img {
-    width: 100%;
-    height: auto;
+  .project-card {
+    width: 90%; /* Reduce card width for smaller screens */
   }
 
   .contact-section form {
@@ -335,11 +333,11 @@ footer p {
     font-size: 1.5em;
   }
 
-  .projects-section ul li {
+  .projects-container {
     padding: 10px;
   }
 
-  .projects-section ul li img {
+  .projects-card {
     max-width: 100%;
     height: auto;
   }
