@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelector(".hamburger"),n=document.querySelector("nav");e&&n?e.addEventListener("click",(()=>{n.classList.toggle("show")})):console.error("Hamburger or nav element not found.")}));
-//# sourceMappingURL=main.78f7b995.js.map
