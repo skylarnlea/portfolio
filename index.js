@@ -10,5 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Hamburger or nav element not found.");
     }
 });
-  
-  
+
+document.getElementById('contact-form').addEventListener('submit', (event) => {
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  if (!email || !message) {
+    event.preventDefault();
+    alert('Please fill out all fields.');
+  }
+});  
