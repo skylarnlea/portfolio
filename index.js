@@ -19,4 +19,4 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
     event.preventDefault();
     alert('Please fill out all fields.');
   }
-});  
+});   //used Formspree instead of making backend
