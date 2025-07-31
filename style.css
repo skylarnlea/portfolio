@@ -140,7 +140,7 @@ main {
 }
 
 .about-section .tech p {
-  justify-content: center;
+  text-align: center;
 }
 
 .projects-section h2, .contact-section h2 {
@@ -170,7 +170,7 @@ main {
 
 .project-card {
   flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
-  max-width: 400px; /* Limit the maximum width of each card */
+  max-width: 500px; /* Limit the maximum width of each card */
   background-color: #A3826C; /* Background color for the card */
   color: #FFFFFF; /* Text color */
   border-radius: 8px; /* Rounded corners */
