@@ -183,6 +183,32 @@ main {
   transition: transform 0.3s ease; /* Add smooth hover effect */
 }
 
+.recruiter-hook {
+  background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+  color: #222;
+  border: 2px solid #FF8C00;
+  box-shadow: 0 6px 16px rgba(255, 140, 0, 0.2);
+  position: relative;
+}
+.recruiter-hook b {
+  font-size: 1.5em;
+  color: #FF8C00;
+}
+.recruiter-hook .contact-btn {
+  background-color: #FF8C00;
+  color: #fff;
+  border: none;
+  font-size: 1.1em;
+  padding: 12px 24px;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.15);
+  transition: background 0.3s, color 0.3s;
+}
+.recruiter-hook .contact-btn:hover {
+  background: #FFD700;
+  color: #FF8C00;
+}
+
 .project-card:hover {
   transform: translateY(-5px); /* Slight hover effect */
 }
