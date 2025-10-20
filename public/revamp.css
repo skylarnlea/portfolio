@@ -1,0 +1,38 @@
+/* Revamp modal styles - matched to site palette */
+.revamp-modal {position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:9999;font-family:Arial, sans-serif}
+.revamp-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6)}
+.revamp-content{
+    position:relative;
+    background:#EFEFEE; /* light panel like footer */
+    color:#3E3D3D; /* site dark text */
+    padding:1.75rem 1.5rem;
+    border-radius:10px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.45);
+    max-width:560px;
+    width:92%;
+    z-index:1;
+    text-align:center;
+    border-top:4px solid #A3826C; /* tan accent */
+}
+.revamp-close{
+    position:absolute;top:10px;right:10px;border:0;
+    background:#3E3D3D;color:#EFEFEE;width:36px;height:36px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.25)
+}
+.revamp-content h3{margin-top:0;margin-bottom:.35rem;font-size:1.4rem;color:#A3826C}
+.revamp-content p{margin:0 0 1rem;color:#3E3D3D}
+.revamp-actions{display:flex;justify-content:center}
+.revamp-btn{
+    background:#A3826C; /* tan button like site */
+    color:#FFFFFF;border:0;padding:.6rem 1rem;border-radius:6px;cursor:pointer;font-weight:700;
+    box-shadow:0 4px 10px rgba(163,130,108,0.18);
+}
+.revamp-btn:hover{background:#3E3D3D;color:#EFEFEE}
+@media (prefers-reduced-motion: no-preference){
+    .revamp-content{transform:translateY(-8px);animation:revamp-pop .28s ease-out}
+    @keyframes revamp-pop{from{opacity:0;transform:translateY(-16px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+}
+@media (max-width:480px){
+    .revamp-content{padding:1rem;width:94%;border-radius:8px}
+    .revamp-close{width:32px;height:32px;font-size:1rem}
+}

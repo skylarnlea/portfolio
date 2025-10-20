@@ -8,6 +8,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="revamp.css" rel="stylesheet" type="text/css"/>
     </head>
 
    <!-- Portfolio Web Page Content Below -->
@@ -42,9 +43,21 @@
             <a href="#contact">Contact</a>
         </nav>
       </header>
+            <!-- Nostalgic Revamp Modal -->
+            <div id="revamp-modal" class="revamp-modal" aria-hidden="false" role="dialog" aria-modal="true" aria-labelledby="revamp-title">
+                <div class="revamp-overlay" data-dismiss="overlay"></div>
+                <div class="revamp-content" role="document">
+                    <button class="revamp-close" aria-label="Close revamp modal">×</button>
+                    <h3 id="revamp-title">Nostalgic Revamp Coming Soon...</h3>
+                    <p>We're reimagining this site with a nostalgic theme. Stay tuned — new look arriving soon!</p>
+                    <div class="revamp-actions">
+                        <button id="revamp-ok" class="revamp-btn">Got it</button>
+                    </div>
+                </div>
+            </div>
       <main>
         <section class="about-section" id="about">
-            <img src="/images/profilephoto.jpg" alt="About Me Image">
+            <img src="images/profilephoto.jpg" alt="About Me Image">
             <div class="text">
                 <h2>Hi, I'm Skylar!</h2>
                 <br/>
@@ -105,7 +118,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="/images/AIChatbotAssistant.png" alt="AI chatbot assistant image">
+                    <img src="images/AIChatbotAssistant.png" alt="AI chatbot assistant image">
                     <p><b>AI Chatbot Assistant</b></p>
                     <p>AI Integrated Next.js Application</p> 
                     <p><i>Next.js, Typescript, Tailwind CSS, Vertex AI, RAG, Docker, Cloud Run, Google Cloud Storage (coming soon)</i></p>
@@ -114,7 +127,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="/images/apple-touch-icon.png" alt="pastpartum fitness journey application image">
+                    <img src="images/apple-touch-icon.png" alt="pastpartum fitness journey application image">
                     <p><b>PostPartum Fitness Journey</b></p>
                     <p>Fitness Application</p> 
                     <p><i>Frontend: React</i></p>
@@ -138,7 +151,11 @@
       <footer>
         <p>&copy; 2024 Skylar Lea. All Rights Reserved.</p>
       </footer>
-      <script src="index.js"></script> <!-- Update with your JavaScript file path -->
+            
+            <!-- Revamp modal styles and behavior extracted to revamp.css and revamp.js -->
+            <script src="revamp.js" defer></script>
+
+            <script src="index.js"></script> <!-- Update with your JavaScript file path -->
     </body>
 </html>
 
